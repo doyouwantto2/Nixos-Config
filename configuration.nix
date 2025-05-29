@@ -67,12 +67,15 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
+    jack.enable = true;
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
+
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -107,10 +110,17 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  ocamlPackages.github
+  git
+  github-desktop
   neovim
   vscode
+  kitty
   gnat
+  waybar
+  dunst
+  libnotify
+  swww
+  rofi-wayland
   ];
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
