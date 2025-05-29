@@ -109,6 +109,7 @@
   ocamlPackages.github
   neovim
   vscode
+  gnat
   ];
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
