@@ -1,12 +1,11 @@
 {
-  description = "My nixcats configuration";
+  description = "My configuration";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixCats.url = "github:BirdeeHub/nixCats-nvim";
   };
 
-  outputs = { self, nixpkgs, nixCats, ... }:
+  outputs = { self, nixpkgs, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
@@ -19,7 +18,6 @@
         ];
       };
 
-      packages.${system}.default = nixCats.packages.${system}.default;
     };
 }
 
