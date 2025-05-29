@@ -19,6 +19,11 @@
         ];
       };
 
+      packages.${system}.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
+
+      packages.${system}.default = self.packages.x86_64-linux.hello;
+
+
     };
 }
 
