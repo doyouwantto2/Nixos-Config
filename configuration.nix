@@ -108,8 +108,6 @@
   neovim
   vscode
   gnat
-  gnomeExtensions.kando-integration
-  kando
   ];
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
