@@ -1,26 +1,25 @@
 {
-  description = "My NixOS configuration";
+  description = "My nixcats configuration";
 
   inputs = {
-      nixpkgs.url = "github:NixOs/nixpkgs/nixos-unstable";
-
-      nixcats.url = "github:BirdeeHub/nixcats";
-      nixcats.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixCats.url = "github:BirdeeHub/nixCats-nvim";
   };
 
-  outputs = { self, nixpkgs, nixcats, ... }:
-  let 
-    system = "x86_64-linux";
-  in
-  {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+  outputs = { self, nixpkgs, nixCats, ... }:
+    let
       system = "x86_64-linux";
-      modules = [
-        ./configuration.nix
-      ];
+      pkgs = import nixpkgs { inherit system; };
+      lib = nixpkgs.lib;
+    in {
+      nixosConfigurations.nixos = lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./configuration.nix
+        ];
+      };
+
+      packages.${system}.nixCats = nixCats.packages.${system}.default;
     };
-    
-    packages.${system}.nixcats = nixcats.packages.${system}.default;
-  };
 }
 
