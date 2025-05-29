@@ -12,7 +12,7 @@
       lib = nixpkgs.lib;
     in {
       nixosConfigurations.nixos = lib.nixosSystem {
-        system = "x86_64-linux";
+        inherit system;
         modules = [
           ./configuration.nix
         ];
