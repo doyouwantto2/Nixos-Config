@@ -19,7 +19,7 @@
         ];
       };
 
-      packages.${system}.nixCats = nixCats.packages.${system}.default;
+      packages.${system}.default = nixCats.packages.${system}.default;
     };
 }
 
