@@ -8,7 +8,7 @@
       nixcats.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs }:
+  outputs = { self, nixpkgs, nixcats, ... }:
   let 
     system = "x86_64-linux";
   in
