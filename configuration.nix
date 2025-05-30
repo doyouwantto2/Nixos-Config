@@ -104,18 +104,29 @@
   # Install hyprland
   programs.hyprland.enable = true;
 
+  #Install nix-ld
+  programs.nix-ld.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+  unzip
   git
   github-desktop
+  lua
+  lua-language-server
+  nodejs
+  conda
+  llvmPackages_20.libcxxClang
+  gnat
+  ripgrep
   neovim
   vscode
   kitty
-  gnat
+  brightnessctl
   waybar
   dunst
   libnotify
