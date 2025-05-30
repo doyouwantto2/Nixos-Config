@@ -138,6 +138,8 @@
   wl-clipboard
   brightnessctl
   waybar
+  hyprshot
+  swaynotificationcenter
   line-awesome
   dunst
   libnotify
