@@ -120,7 +120,6 @@
   lua-language-server
   nodejs
   conda
-  llvmPackages_20.libcxxClang
   gnat
   ripgrep
   neovim
