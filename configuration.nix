@@ -113,23 +113,36 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+  # utilities
   unzip
   git
   github-desktop
+
+  # language configurations for neovim
   lua
   lua-language-server
   nodejs
   conda
   gnat
   ripgrep
+
+  # IDE
   neovim
   vscode
+
+  # Terminal emulator
   kitty
+  wezterm
+
+  # Need for hyprland
+  wl-clipboard
   brightnessctl
   waybar
+  line-awesome
   dunst
   libnotify
   swww
+  wofi
   rofi-wayland
   ];
   # Some programs need SUID wrappers, can be configured further or are
