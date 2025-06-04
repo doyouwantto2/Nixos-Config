@@ -113,20 +113,46 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  # utilities
+
+  # Entertainment
+  keypunch
+  spotify
+
+  # Fonts
+  line-awesome
+  nerdfetch
+
+  # Useful app
+  teams-for-linux
+  discord
+  krita
+
+  # Utilities
   unzip
   git
-  github-desktop
+  cava
+  qview
+  zathura
 
-  # language configurations for neovim
+  # Language configurations for neovim
   lua
   lua-language-server
+  luarocks
+  ruby
+  mastodon
+  imagemagick
+  ghostscript
+  fd
   nodejs
-  conda
   gnat
   ripgrep
 
-  # IDE
+  # Package manager (project)
+  bundler
+  docker
+  docker-client
+
+  # Text editor
   neovim
   vscode
 
@@ -134,16 +160,19 @@
   kitty
   wezterm
 
-  # Need for hyprland
+  # Use for hyprland
   wl-clipboard
   brightnessctl
   waybar
   hyprshot
+  hyprpaper
+  networkmanagerapplet
   swaynotificationcenter
-  line-awesome
   dunst
   libnotify
   swww
+  eww
+  waypaper
   wofi
   rofi-wayland
   ];
